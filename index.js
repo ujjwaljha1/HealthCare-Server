@@ -18,11 +18,11 @@ require('./src/models');
 
 const initializeDatabase = async () => {
   try {
-    console.log('Attempting to connect to PostgreSQL...');
+    console.log('Attempting');
     await connectDB();
     const { sequelize } = require('./src/config/database');
     await sequelize.sync({ alter: true });
-    console.log('✅ All models were synchronized successfully');
+    console.log(' synchronized');
   } catch (error) {
     console.error('Failed to initialize database:', error.message);
     process.exit(1);
